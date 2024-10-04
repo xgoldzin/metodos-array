@@ -25,7 +25,8 @@
     <button type="button" onclick="removePrimeiroProduto()">Remover Primeiro Produto</button>
     <button type="button" onclick="addProdutoNoInicio('Produto Inicial', 10.0, 1)">Adicionar Produto no Início</button>
     <button type="button" onclick="removeProdutoPorIndice(prompt('Digite o índice do produto a remover:'))">Remover Produto por Índice</button>
-    <button type="button" onclick="getProdutosSlice(0, 2)">Mostrar Produtos (Slice 0-2)</button>
+    <button type="button" onclick="getProdutosSlice(prompt('Digite o índice inicial:'), prompt('Digite o índice final:'))">Mostrar Produtos (Slice)</button>
+
     
     <h3>Manipulações de Array</h3>
     <button type="button" onclick="concatenaProdutos([{ id: 99, nome: 'Produto Concatenado', preco: 15.0, quantidade: 5 }])">Concatenar Produtos</button>

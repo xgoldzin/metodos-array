@@ -48,8 +48,20 @@ function removeProdutoPorIndice(index) {
 // Função para obter uma parte dos produtos
 function getProdutosSlice(inicio, fim) {
     const slicedProdutos = produtos.slice(inicio, fim);
-    console.log(slicedProdutos);
+    const produtosCadastradosDiv = document.getElementById("produtosCadastrados");
+    produtosCadastradosDiv.innerHTML = ""; // Limpa a área antes de exibir
+
+    if (slicedProdutos.length === 0) {
+        produtosCadastradosDiv.innerHTML = "<p>Nenhum produto encontrado nesse intervalo.</p>";
+        return;
+    }
+
+    slicedProdutos.forEach(produto => {
+        produtosCadastradosDiv.innerHTML += 
+            `<p>${produto.id} - ${produto.nome} - R$ ${produto.preco.toFixed(2)} - ${produto.quantidade}</p>`;
+    });
 }
+
 
 // Função para concatenar dois arrays de produtos
 function concatenaProdutos(outrosProdutos) {
