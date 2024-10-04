@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/js/script.js" defer></script>
+</head>
+<body>
+    <hr>
+    <h2>CADASTRO DE PRODUTOS</h2>
+    <input type="text" name="id" id="id" placeholder="ID do Produto" disabled>
+    <input type="text" name="nomeP" id="nomeP" placeholder="Nome do Produto">
+    <input type="number" name="preco" id="preco" placeholder="Preço do Produto">
+    <input type="number" name="qtde" id="qtde" placeholder="Quantidade">
+    <button type="button" id="cadastrarProduto" onclick="createProduto()">Cadastrar</button>
+    <div id="msg"></div>
+    <button type="button" onclick="readProdutos()">Visualizar Produtos</button>
+
+    <div id="produtosCadastrados"></div>
+
+    <h3>Funções Adicionais</h3>
+    <button type="button" onclick="removeUltimoProduto()">Remover Último Produto</button>
+    <button type="button" onclick="removePrimeiroProduto()">Remover Primeiro Produto</button>
+    <button type="button" onclick="addProdutoNoInicio('Produto Inicial', 10.0, 1)">Adicionar Produto no Início</button>
+    <button type="button" onclick="removeProdutoPorIndice(prompt('Digite o índice do produto a remover:'))">Remover Produto por Índice</button>
+    <button type="button" onclick="getProdutosSlice(0, 2)">Mostrar Produtos (Slice 0-2)</button>
+    
+    <h3>Manipulações de Array</h3>
+    <button type="button" onclick="concatenaProdutos([{ id: 99, nome: 'Produto Concatenado', preco: 15.0, quantidade: 5 }])">Concatenar Produtos</button>
+    <button type="button" onclick="alert(findProdutoPorNome(prompt('Digite o nome do produto:')))">Encontrar Produto por Nome</button>
+    <button type="button" onclick="alert(verificaProduto(prompt('Digite o nome do produto para verificar:')))">Verificar Produto</button>
+    <button type="button" onclick="ordenarProdutosPorPreco()">Ordenar Produtos por Preço</button>
+    <button type="button" onclick="inverterProdutos()">Inverter Ordem dos Produtos</button>
+    
+    <h3>String e Array</h3>
+    <button type="button" onclick="produtosParaString()">Converter Produtos para String</button>
+    <button type="button" onclick="dividirStringEmProdutos(prompt('Digite a string dos produtos (formato: ID - Nome - R$ Preço - Quantidade):'))">Dividir String em Produtos</button>
+</body>
+</html>
