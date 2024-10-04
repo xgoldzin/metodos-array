@@ -46,7 +46,10 @@ function removeProdutoPorIndice(index) {
 }
 
 // Função para obter uma parte dos produtos
-function getProdutosSlice(inicio, fim) {
+
+function getProdutosSlice() {
+    let inicio = Number(document.getElementById("inic").value)
+    let fim = Number(document.getElementById("fim").value)
     const slicedProdutos = produtos.slice(inicio, fim);
     const produtosCadastradosDiv = document.getElementById("produtosCadastrados");
     produtosCadastradosDiv.innerHTML = ""; // Limpa a área antes de exibir

@@ -25,7 +25,12 @@
     <button type="button" onclick="removePrimeiroProduto()">Remover Primeiro Produto</button>
     <button type="button" onclick="addProdutoNoInicio('Produto Inicial', 10.0, 1)">Adicionar Produto no Início</button>
     <button type="button" onclick="removeProdutoPorIndice(prompt('Digite o índice do produto a remover:'))">Remover Produto por Índice</button>
-    <button type="button" onclick="getProdutosSlice(prompt('Digite o índice inicial:'), prompt('Digite o índice final:'))">Mostrar Produtos (Slice)</button>
+    
+    <p>Slice:</p>
+    <input type="number" name="inic" id="inic" placeholder="inicio">
+    <input type="number" name="fim" id="fim" placeholder="final">
+    <button type="button" onclick="getProdutosSlice()">Mostrar Produtos (Slice)</button>
+    <p id="produtosCadastrados"></p>
 
     
     <h3>Manipulações de Array</h3>
