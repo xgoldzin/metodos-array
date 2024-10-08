@@ -114,7 +114,7 @@ function dividirStringEmProdutos(produtosString) {
 
 // Funções de visualização e interação com produtos
 function readProdutos() {
-    const produtosCadastradosDiv = document.getElementById("produtosCadastrados");
+    const produtosCadastradosDiv = document.getElementById("tabelaProdutos");
     produtosCadastradosDiv.innerHTML = ""; // Limpa a área de produtos cadastrados
 
     if (produtos.length === 0) {
@@ -124,6 +124,12 @@ function readProdutos() {
 
     produtos.forEach(produto => {
         produtosCadastradosDiv.innerHTML += 
-            `<p>${produto.id} - ${produto.nome} - R$ ${produto.preco.toFixed(2)} - ${produto.quantidade}</p>`;
+            `
+            <tr>
+                <td>${produto.id}</td>
+                <td>${produto.nome}</td>
+                <td>R$ ${produto.preco.toFixed(2)}</td>
+                <td>${produto.quantidade}</td>
+            <tr>`;
     });
 }

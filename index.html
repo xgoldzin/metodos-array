@@ -18,7 +18,20 @@
     <div id="msg"></div>
     <button type="button" onclick="readProdutos()">Visualizar Produtos</button>
 
-    <div id="produtosCadastrados"></div>
+    <div id="produtosCadastrados">
+        <table>
+            <thead>
+            <tr>
+                <td>Id</td>
+                <td>Nome</td>
+                <td>Preço</td>
+                <td>Quantidade</td>
+            </tr>
+            </thead>
+            <tbody id="tabelaProdutos">
+            </tbody>
+        </table>
+    </div>
 
     <h3>Funções Adicionais</h3>
     <button type="button" onclick="removeUltimoProduto()">Remover Último Produto</button>
